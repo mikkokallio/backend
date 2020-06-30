@@ -12,16 +12,7 @@ morgan.token('body', function (req, res) { return JSON.stringify(req.body) });
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
 app.use(cors())
 app.use(express.static('build'))
-/*
-app.get('/info', (req, res) => {
-  const info = persons.length
-  const time = new Date()
-  res.send(`
-    <p>Phonebook has info for ${info} people</p>
-    <p>${time}</p>
-  `)
-})
-*/
+
 app.get('/info', (req, res) => {
   Person.find({}).then(persons => {
     const info = persons.length

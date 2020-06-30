@@ -7,8 +7,8 @@ POST http://localhost:3001/api/persons HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Wwa",
-    "number": "999-123-123"
+    "name": "Ja",
+    "number": "000-123-123"
 }
 
 ### Delete a person
